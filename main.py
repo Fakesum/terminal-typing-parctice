@@ -40,7 +40,7 @@ def pressision(first, second):
         return distance_matrix[first_length-1][second_length-1]
     return 100*levenshtein_distance(first, second) / float(max(len(first), len(second)))
 
-print(time)
+print("Time Taken: ", time)
 print("words typed,", len(test_words))
 
 print("wpm:", (len(test_words) / time)*60,", correct %.2f of the time" % (100 -pressision(" ".join(test_words), res)))
